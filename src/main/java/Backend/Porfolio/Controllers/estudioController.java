@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/estudio")
-@CrossOrigin(origins ={"https://porfolio-ublellart.web.app","http://localhost:4200"})
+@CrossOrigin(origins ={"https://victor-ubellart.web.app/","http://localhost:4200"})
 public class estudioController {
     
     

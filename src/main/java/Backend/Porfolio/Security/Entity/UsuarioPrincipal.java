@@ -24,7 +24,7 @@ public class UsuarioPrincipal implements UserDetails {
     private Collection<? extends GrantedAuthority> authorities;
 
 //contructor
-//    public UsuarioPrincipal(String nombre, String nombreUsuario, String email, String password, Collection<? extends GrantedAuthority> authorities) {
+
  public UsuarioPrincipal( String nombreUsuario, String password, Collection<? extends GrantedAuthority> authorities) {
 //        this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
@@ -37,7 +37,7 @@ public class UsuarioPrincipal implements UserDetails {
         List<GrantedAuthority> authorities = usuario.getRoles().stream().map(rol -> new SimpleGrantedAuthority(rol.getRolNombre()
                 .name())).collect(Collectors
                 .toList());
-//        return new UsuarioPrincipal(usuario.getNombre(), usuario.getNombreUsuario(), usuario.getEmail(), usuario.getPassword(), authorities);
+
         return new UsuarioPrincipal( usuario.getNombreUsuario(), usuario.getPassword(), authorities);
 
     }
